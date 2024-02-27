@@ -21,7 +21,10 @@ def baseline_task_2(train_loc, test_loc):
     train = pd.read_csv(train_loc)    
     test = pd.read_csv(test_loc)
 
-    pred = np.argmax(train['label'].value_counts())
+    # pred = np.argmax(train['label'].value_counts())
+    # value_counts() creates a panda series whihc includes an index and a value
+    # we want to get the index of the maximum value
+    pred = train['label'].value_counts().idxmax()
     test['pred'] = pred
     
     output = test[['id','pred']]    
