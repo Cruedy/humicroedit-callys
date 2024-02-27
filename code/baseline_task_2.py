@@ -22,8 +22,8 @@ def baseline_task_2(train_loc, test_loc):
     test = pd.read_csv(test_loc)
 
     # pred = np.argmax(train['label'].value_counts())
-    # value_counts() creates a panda series whihc includes an index and a value
-    # we want to get the index of the maximum value
+    # value_counts() creates a panda series which includes an index and a value sorted by the values in decreasing order
+    # we want to get the index of the maximum value, but value_counts makes the max value the 0th index, so np.argmax returns 0 instead of 1 
     pred = train['label'].value_counts().idxmax()
     test['pred'] = pred
     
