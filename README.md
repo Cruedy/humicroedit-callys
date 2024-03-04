@@ -23,6 +23,8 @@ This repository provides python code to run baseline experiments and evaluation 
 
 * Unzip: ```unzip semeval-2020-task-7-data.zip```
 
+* Additionally, download extra data from <a href="https://www.cs.rochester.edu/u/nhossain/funlines.html">Funlines</a>.
+
 * Create directory to save predictions: ```mkdir output```
 
 * ```cd code/```
